@@ -16,6 +16,7 @@ import { AuthGuard } from './_auth/auth.guard';
 import { AuthInterceptor } from './_auth/auth.interceptor';
 import { UserService } from './_services/user.service';
 import { RegisterComponent } from './register/register.component';
+import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     HeaderComponent,
     ForbiddenComponent,
-    RegisterComponent
+    RegisterComponent,
+    ShowProductDetailsComponent
   ],
     imports: [
         BrowserModule,
