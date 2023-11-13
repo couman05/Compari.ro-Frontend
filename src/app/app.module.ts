@@ -19,6 +19,8 @@ import { UserService } from './_services/user.service';
 import { RegisterComponent } from './register/register.component';
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
 import {ProductService} from "./_services/product.service";
+import { SearchResultComponent } from './search-result/search-result.component';
+
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import {ProductService} from "./_services/product.service";
     ForbiddenComponent,
     RegisterComponent,
     ShowProductDetailsComponent,
+    SearchResultComponent,
+
     // SearchBarComponent
   ],
     imports: [

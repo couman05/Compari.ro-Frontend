@@ -8,6 +8,8 @@ import { UserComponent } from './user/user.component';
 import { AuthGuard } from './_auth/auth.guard';
 import {RegisterComponent} from "./register/register.component";
 import {ShowProductDetailsComponent} from "./show-product-details/show-product-details.component";
+import {HeaderComponent} from "./header/header.component";
+import {SearchResultComponent} from "./search-result/search-result.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,8 +19,11 @@ const routes: Routes = [
   { path: 'forbidden', component: ForbiddenComponent },
   { path: 'register',component:RegisterComponent},
   { path: 'showProductDetails',component:ShowProductDetailsComponent},
- // { path: 'searchProduct',component:ShowProductDetailsComponent}
-  { path: 'showSearchResults', component: ShowProductDetailsComponent }
+  { path: 'searchByKeyword',component:HeaderComponent},
+  { path: 'searchResult',component:SearchResultComponent}
+
+
+
 ];
 
 @NgModule({

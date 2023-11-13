@@ -18,6 +18,7 @@ export class ProductService {
 
   public searchByKeyword(searchKeyword: string )
   {
+
     return this.httpClient.get<Product[]>("http://localhost:9090/getProduct/" +searchKeyword);
   }
 

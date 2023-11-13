@@ -1,0 +1,28 @@
+<!-- product-list.component.html -->
+<div>
+    <h2>Product List</h2>
+
+
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Site</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Link</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{ product.id }}</td>
+            <td>{{ product.site }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.price | currency: 'RON':'symbol':'1.2-2' }}</td>
+            <td><a href="{{ product.link }}" target="_blank">{{ product.link }}</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
