@@ -16,7 +16,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'forbidden', component: ForbiddenComponent },
   { path: 'register',component:RegisterComponent},
-  { path: 'showProductDetails',component:ShowProductDetailsComponent}
+  { path: 'showProductDetails',component:ShowProductDetailsComponent},
+ // { path: 'searchProduct',component:ShowProductDetailsComponent}
+  { path: 'showSearchResults', component: ShowProductDetailsComponent }
 ];
 
 @NgModule({

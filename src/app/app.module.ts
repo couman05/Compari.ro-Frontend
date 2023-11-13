@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+// import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +18,7 @@ import { AuthInterceptor } from './_auth/auth.interceptor';
 import { UserService } from './_services/user.service';
 import { RegisterComponent } from './register/register.component';
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
+import {ProductService} from "./_services/product.service";
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { ShowProductDetailsComponent } from './show-product-details/show-product
     HeaderComponent,
     ForbiddenComponent,
     RegisterComponent,
-    ShowProductDetailsComponent
+    ShowProductDetailsComponent,
+    // SearchBarComponent
   ],
     imports: [
         BrowserModule,
@@ -39,12 +42,14 @@ import { ShowProductDetailsComponent } from './show-product-details/show-product
         RouterModule,
     ],
   providers: [
+
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass:AuthInterceptor,
       multi:true
     },
+      ProductService,
     UserService
   ],
   bootstrap: [AppComponent]

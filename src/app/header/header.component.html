@@ -14,6 +14,8 @@
             *ngIf="userService.roleMatch(['Admin'])"
             >Admin Dashboard</a>
           </li>
+
+<!--          <app-search-bar></app-search-bar>-->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="/user"
             *ngIf="userService.roleMatch(['User'])"
@@ -24,7 +26,11 @@
                *ngIf="userService.roleMatch(['Admin'])"
             >Show All Products</a>
           </li>
+
+
         </ul>
+
+
 
 
         <button *ngIf="! isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">Login</button>
