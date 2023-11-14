@@ -4,3 +4,11 @@
         <h1>{{message}}</h1>
     </div>
 </div>
+
+<div *ngIf="user">
+    <h2>User Details</h2>
+    <p><strong>User Name:</strong> {{ user.userName }}</p>
+    <p><strong>First Name:</strong> {{ user.userFirstName }}</p>
+    <p><strong>Last Name:</strong> {{ user.userLastName }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+</div>
