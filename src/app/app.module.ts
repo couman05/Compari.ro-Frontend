@@ -9,7 +9,7 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from './_auth/auth.guard';
@@ -17,6 +17,7 @@ import { AuthInterceptor } from './_auth/auth.interceptor';
 import { UserService } from './_services/user.service';
 import { RegisterComponent } from './register/register.component';
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ShowProductDetailsComponent } from './show-product-details/show-product
     HeaderComponent,
     ForbiddenComponent,
     RegisterComponent,
-    ShowProductDetailsComponent
+    ShowProductDetailsComponent,
+    UpdateProductComponent
   ],
     imports: [
         BrowserModule,
@@ -37,6 +39,7 @@ import { ShowProductDetailsComponent } from './show-product-details/show-product
         FormsModule,
         HttpClientModule,
         RouterModule,
+        ReactiveFormsModule,
     ],
   providers: [
     AuthGuard,
