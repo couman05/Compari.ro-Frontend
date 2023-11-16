@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'showProductDetails',component:ShowProductDetailsComponent},
 
   { path: 'searchByKeyword',component:HeaderComponent},
-  { path: 'searchResult',component:SearchResultComponent}
+  { path: 'searchResult',component:SearchResultComponent},
   { path: 'updateProductDetails/:id',component:UpdateProductComponent,canActivate:[AuthGuard], data:{roles:['Admin']} }
 
 ];

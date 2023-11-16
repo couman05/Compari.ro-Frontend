@@ -19,7 +19,6 @@ export class ShowProductDetailsComponent implements OnInit {
     products: Product[] = [];
 
 
- products: Product[] = [];
   constructor(private productService:ProductService,
               private router:Router) { }
 
