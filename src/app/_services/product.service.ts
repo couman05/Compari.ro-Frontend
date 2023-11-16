@@ -8,6 +8,10 @@ import {Observable} from "rxjs";
 })
 export class ProductService {
 
+  private updateUrl = 'http://localhost:9090/admin';
+  private productUrl = 'http://localhost:9090/getProductById';
+  private deleteUrl = 'http://localhost:9090/deleteProduct';
+
   constructor(private httpClient: HttpClient) { }
 
   public getAllProducts()
@@ -20,6 +24,27 @@ export class ProductService {
   {
 
     return this.httpClient.get<Product[]>("http://localhost:9090/getProduct/" +searchKeyword);
+  }
+
+
+
+  getProductById(id: string): Observable<any> {
+    const url = `${this.productUrl}/${id}`;
+    return this.httpClient.get(url);
+  }
+
+  updateProduct(id:String,updatedFields:any):Observable<any>{
+
+    const url = `${this.updateUrl}/${id}`;
+    return this.httpClient.put(url, updatedFields);
+
+  }
+
+  deleteProduct(id:String):Observable<any>{
+
+    const url = `${this.deleteUrl}/${id}`;
+    return this.httpClient.delete<void>(url);
+
   }
 
 }

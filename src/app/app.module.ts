@@ -10,7 +10,7 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from './_auth/auth.guard';
@@ -18,8 +18,10 @@ import { AuthInterceptor } from './_auth/auth.interceptor';
 import { UserService } from './_services/user.service';
 import { RegisterComponent } from './register/register.component';
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
+
 import {ProductService} from "./_services/product.service";
 import { SearchResultComponent } from './search-result/search-result.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 
@@ -34,9 +36,10 @@ import { SearchResultComponent } from './search-result/search-result.component';
     ForbiddenComponent,
     RegisterComponent,
     ShowProductDetailsComponent,
-    SearchResultComponent,
 
-    // SearchBarComponent
+    SearchResultComponent,
+    UpdateProductComponent
+
   ],
     imports: [
         BrowserModule,
@@ -44,6 +47,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
         FormsModule,
         HttpClientModule,
         RouterModule,
+        ReactiveFormsModule,
     ],
   providers: [
 

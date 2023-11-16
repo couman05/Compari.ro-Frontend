@@ -1,4 +1,4 @@
-<!-- product-list.component.html -->
+<!-- show-product-details.component.html -->
 <div>
     <h2>Product List</h2>
 
@@ -19,6 +19,7 @@
             <th>Title</th>
             <th>Price</th>
             <th>Link</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -28,6 +29,10 @@
             <td>{{ product.title }}</td>
             <td>{{ product.price | currency: 'RON':'symbol':'1.2-2' }}</td>
             <td><a href="{{ product.link }}" target="_blank">{{ product.link }}</a></td>
+            <td>
+                <button (click)="redirectToUpdate(product.id)">Update</button>
+                <button  class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+            </td>
         </tr>
         </tbody>
     </table>

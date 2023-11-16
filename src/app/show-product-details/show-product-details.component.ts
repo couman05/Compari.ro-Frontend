@@ -3,7 +3,10 @@ import {ProductService} from "../_services/product.service";
 // import {SearchService} from "../_services/search.service";
 import {Product} from "../_model/product.model";
 import {HttpErrorResponse} from "@angular/common/http";
+
 import {ActivatedRoute} from "@angular/router";
+import {Router} from "@angular/router";
+
 
 @Component({
     selector: 'app-show-search-details',
@@ -12,26 +15,20 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class ShowProductDetailsComponent implements OnInit {
 
+
     products: Product[] = [];
 
 
+ products: Product[] = [];
+  constructor(private productService:ProductService,
+              private router:Router) { }
 
-    // searchedProduct: Product | null = null;
-    constructor(private productService:ProductService, private route: ActivatedRoute ) { }
+  ngOnInit(): void {
+    this.getAllProducts();
+  }
+    
 
-    ngOnInit(): void {
-        this.getAllProducts();
-        //     this.route.queryParams.subscribe(params => {
-        //         const productText = params['productText']; // Assuming 'productId' is the parameter containing the product identifier
-        //         if (productText) {
-        //             this.searchForProduct(productText);
-        //         }
-        // });
-    }
-
-
-
-    public getAllProducts(searchkeyword : string="")
+public getAllProducts(searchkeyword : string="")
     {
         this.productService.getAllProducts().subscribe(
             (resp:Product[])=>{
@@ -67,18 +64,21 @@ export class ShowProductDetailsComponent implements OnInit {
         }
 
     }
+ 
+    redirectToUpdate(productId: string) 
+    {
+        this.router.navigate(['/updateProductDetails', productId]);
+    }
 
-    // searchForProduct(productId: string) {
-    //     this.productService.searchForProduct(productId).subscribe(
-    //         (product: Product) => {
-    //             this.searchedProduct = product;
-    //         },
-    //         (error: HttpErrorResponse) => {
-    //             console.log(error);
-    //         }
-    //     );
-    // }
-
+    deleteProduct(productId: string): void {
+        // Call your service to delete the product
+        this.productService.deleteProduct(productId).subscribe(() => {
+            // If successful, remove the deleted product from the local array
+            this.products = this.products.filter(product => product.id !== productId);
+        }, error => {
+            console.error('Error deleting product:', error);
+        });
+    }
 
 
 }
