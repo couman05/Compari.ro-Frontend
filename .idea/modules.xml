@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/jwt-youtube-ui-main.iml" filepath="$PROJECT_DIR$/.idea/jwt-youtube-ui-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Compari.ro-Frontend.iml" filepath="$PROJECT_DIR$/.idea/Compari.ro-Frontend.iml" />
     </modules>
   </component>
 </project>
