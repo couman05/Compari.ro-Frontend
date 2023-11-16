@@ -17,9 +17,8 @@ export class ShowProductDetailsComponent implements OnInit {
 
 
     products: Product[] = [];
+// mcuc
 
-
- products: Product[] = [];
   constructor(private productService:ProductService,
               private router:Router) { }
 
