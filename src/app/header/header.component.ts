@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 import { UserAuthService } from '../_services/user-auth.service';
 import { UserService } from '../_services/user.service';
+import {Product} from "../_model/product.model";
+import {HttpErrorResponse} from "@angular/common/http";
+import {ProductService} from "../_services/product.service";
+import {SearchService} from "../_services/search.service";
 
 @Component({
   selector: 'app-header',
@@ -12,11 +16,22 @@ export class HeaderComponent implements OnInit {
   constructor(
     private userAuthService: UserAuthService,
     private router: Router,
-    public userService: UserService
+    public userService: UserService,
+    private productService:ProductService,
+    private route: ActivatedRoute,
+    private searchService: SearchService
   ) {}
 
-  ngOnInit(): void {}
 
+  onSearch(input: string) {
+    this.searchService.sendSearchInput(input); // Send the input to the service
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  products: Product[] = [];
   public isLoggedIn() {
     return this.userAuthService.isLoggedIn();
   }
@@ -33,5 +48,8 @@ export class HeaderComponent implements OnInit {
   {
     return this.userAuthService.isUser();
   }
+
+
+
 
 }

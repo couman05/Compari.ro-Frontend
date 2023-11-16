@@ -17,7 +17,16 @@ export class ProductService {
   public getAllProducts()
   {
     return this.httpClient.get<Product[]>("http://localhost:9090/getAllProducts");
+
   }
+
+  public searchByKeyword(searchKeyword: string )
+  {
+
+    return this.httpClient.get<Product[]>("http://localhost:9090/getProduct/" +searchKeyword);
+  }
+
+
 
   getProductById(id: string): Observable<any> {
     const url = `${this.productUrl}/${id}`;
@@ -37,4 +46,5 @@ export class ProductService {
     return this.httpClient.delete<void>(url);
 
   }
+
 }

@@ -1,0 +1,60 @@
+/* Style the navbar */
+.navbar {
+    background-color: #3498db; /* Primary color */
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    color: #fff; /* White text color */
+    font-size: 24px;
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+    color: #fff;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Change color on hover */
+}
+
+/* Style the search input and button */
+.search-container {
+    display: flex;
+    margin-left: 1000px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin: 5px 0px;
+    border: none;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background: #01021e;
+    border: none;
+    padding: 20px;
+    border-radius: 3px;
+    margin-left: 0px;
+
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #c50e0e;
+}
+
+
+
