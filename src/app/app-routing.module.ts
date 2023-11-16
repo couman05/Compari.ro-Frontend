@@ -9,6 +9,12 @@ import { AuthGuard } from './_auth/auth.guard';
 import {RegisterComponent} from "./register/register.component";
 import {ShowProductDetailsComponent} from "./show-product-details/show-product-details.component";
 
+import {HeaderComponent} from "./header/header.component";
+import {SearchResultComponent} from "./search-result/search-result.component";
+
+import {UpdateProductComponent} from "./update-product/update-product.component";
+
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'admin', component: AdminComponent, canActivate:[AuthGuard], data:{roles:['Admin']} },
@@ -16,7 +22,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'forbidden', component: ForbiddenComponent },
   { path: 'register',component:RegisterComponent},
-  { path: 'showProductDetails',component:ShowProductDetailsComponent}
+  { path: 'showProductDetails',component:ShowProductDetailsComponent},
+
+  { path: 'searchByKeyword',component:HeaderComponent},
+  { path: 'searchResult',component:SearchResultComponent},
+  { path: 'updateProductDetails/:id',component:UpdateProductComponent,canActivate:[AuthGuard], data:{roles:['Admin']} }
+
 ];
 
 @NgModule({
