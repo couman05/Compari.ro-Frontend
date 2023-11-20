@@ -15,10 +15,18 @@
                 <div class="product-details">
                     <h2><a [routerLink]="['/product', product.id]">{{ product.title }}</a></h2>
                     <p>Site: {{ product.site }}</p>
+                   <button (click)="addToWishlist(product.id)">Add to wishlist</button>
                 </div>
             </div>
         </div>
     </div>
 
+
+
+
+<!--             <td>
+                <button (click)="addToWishlist(product.id)">Add to wishlist</button>
+            </td> -->
+     
 
 </div>
