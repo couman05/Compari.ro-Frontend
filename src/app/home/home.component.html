@@ -2,6 +2,36 @@
    <div class="card text-center" style="padding: 20px;">
     <h1>This is Home Page</h1>
    </div>
+    <h2>Categories</h2>
+    <div *ngFor="let category of categories" (click)="filterProductsByCategory(category)"
+         class="category-item" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+        <div *ngIf="userService.roleMatch(['User'])">
+            {{ category }}
+        </div>
+    </div>
+
+    <button (click)="resetFilter()" class="reset-button">Reset Filter</button>
+
+    <div>
+        <h2>Products</h2>
+        <div class="product-grid">
+            <div class="product-container" *ngFor="let product of filteredProducts">
+                <div class="product-square">
+                    <img [src]="product.image_urls[0]" alt="Product Image" class="product-image">
+                    <div class="product-details">
+                        <h2><a [routerLink]="['/product', product.id]">{{ product.title }}</a></h2>
+                        <p>Site: {{ product.site }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
 </div>
+
+
+
