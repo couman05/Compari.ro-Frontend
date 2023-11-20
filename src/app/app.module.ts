@@ -22,6 +22,7 @@ import { ShowProductDetailsComponent } from './show-product-details/show-product
 import {ProductService} from "./_services/product.service";
 import { SearchResultComponent } from './search-result/search-result.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 
@@ -38,7 +39,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     ShowProductDetailsComponent,
 
     SearchResultComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    ProductDetailComponent
 
   ],
     imports: [

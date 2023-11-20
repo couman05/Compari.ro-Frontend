@@ -14,6 +14,9 @@ export class SearchResultComponent implements OnInit {
     @Input() recievedData: any;
 
     products: Product[] = [];
+    filteredProducts: Product[] = [];
+    categories: string[] = [];
+    selectedCategory: string = '';
   constructor(private searchService: SearchService, private productService: ProductService) { }
 
 
@@ -29,6 +32,9 @@ export class SearchResultComponent implements OnInit {
         this.productService.searchByKeyword(searchKeyword).subscribe(
             (resp: Product[]) => {
                 this.products = resp;
+               // console.log(resp);
+                this.filteredProducts=[...this.products]; // Initialize filtered products with all products
+                this.categories=this.extractCategories(resp); // Extract categories from products
             },
             (error: HttpErrorResponse) => {
                 console.log(error);
@@ -37,4 +43,16 @@ export class SearchResultComponent implements OnInit {
 
 
   }
+    public extractCategories(products: Product[]): string[] {
+        const allCategories = products.map(product => product.category);
+        return Array.from(new Set(allCategories)); // Get unique categories
+    }
+
+    public filterByCategory() {
+        if (this.selectedCategory === '') {
+            this.filteredProducts = [...this.products]; // Show all products if no category is selected
+        } else {
+            this.filteredProducts = this.products.filter(product => product.category === this.selectedCategory);
+        }
+    }
 }
