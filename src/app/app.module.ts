@@ -22,7 +22,11 @@ import { ShowProductDetailsComponent } from './show-product-details/show-product
 import {ProductService} from "./_services/product.service";
 import { SearchResultComponent } from './search-result/search-result.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+
+// import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+
 
 
 
@@ -44,12 +48,14 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 
   ],
     imports: [
+        // MatSnackBarModule,
         BrowserModule,
         AppRoutingModule,
         FormsModule,
         HttpClientModule,
         RouterModule,
-        ReactiveFormsModule,
+        ReactiveFormsModule
+
     ],
   providers: [
 
