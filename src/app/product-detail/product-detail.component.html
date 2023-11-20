@@ -1,0 +1,19 @@
+<div *ngIf="product">
+    <h2>{{ product.title }}</h2>
+    <img [src]="product.image_urls" alt="Product Image" class="product-image">
+    <div class="product-details">
+        <p><strong>Site:</strong> {{ product.site }}</p>
+        <p><strong>Price:</strong> {{ product.price | currency:'RON '}}</p>
+        <p><strong>Link:</strong> <a href="{{ product.link }}" target="_blank">{{ product.link }}</a></p>
+        <p><strong>Category:</strong> {{ product.category }}</p>
+        <p><strong>Description:</strong></p>
+        <ul>
+            <li *ngFor="let desc of product.description">{{ desc }}</li>
+        </ul>
+        <p><strong>Reviews:</strong></p>
+        <ul>
+            <li *ngFor="let review of product.reviews">{{ review }}</li>
+        </ul>
+        <!-- Add other fields as needed -->
+    </div>
+</div>
