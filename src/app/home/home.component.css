@@ -1,0 +1,70 @@
+/* product-list.component.css */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between product squares */
+}
+
+.product-container {
+    flex: 1 0 calc(33.33% - 20px); /* Adjust the width of each product square */
+}
+
+.product-square {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100px; /* Adjust the maximum width of the product image */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-details h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-details p {
+    font-size: 14px;
+    color: #666;
+}
+.category-item {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.category-item:hover {
+    color: blue; /* Change color on hover */
+}
+
+.reset-button {
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: darkred;
+}

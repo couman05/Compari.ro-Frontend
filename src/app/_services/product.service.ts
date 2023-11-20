@@ -11,6 +11,7 @@ export class ProductService {
   private updateUrl = 'http://localhost:9090/admin';
   private productUrl = 'http://localhost:9090/getProductById';
   private deleteUrl = 'http://localhost:9090/deleteProduct';
+  private categoriesUrl = 'http://localhost:9090/getAllCategories';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -45,6 +46,9 @@ export class ProductService {
     const url = `${this.deleteUrl}/${id}`;
     return this.httpClient.delete<void>(url);
 
+  }
+  getCategories(): Observable<string[]> {
+    return this.httpClient.get<string[]>(this.categoriesUrl);
   }
 
 }
