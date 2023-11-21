@@ -26,6 +26,7 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 // import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 
 
@@ -44,7 +45,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 
     SearchResultComponent,
     UpdateProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    WishlistComponent
 
   ],
     imports: [
