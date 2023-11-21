@@ -14,6 +14,7 @@ import {SearchResultComponent} from "./search-result/search-result.component";
 
 import {UpdateProductComponent} from "./update-product/update-product.component";
 import {ProductDetailComponent} from "./product-detail/product-detail.component";
+import {WishlistComponent} from "./wishlist/wishlist.component";
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'searchByKeyword',component:HeaderComponent},
   { path: 'searchResult',component:SearchResultComponent},
   { path: 'updateProductDetails/:id',component:UpdateProductComponent,canActivate:[AuthGuard], data:{roles:['Admin']} },
-  { path: 'product/:id',component:ProductDetailComponent}
+  { path: 'product/:id',component:ProductDetailComponent},
+  { path: 'wishlist',component:WishlistComponent}
 
 ];
 
