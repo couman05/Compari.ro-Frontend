@@ -2,27 +2,31 @@
 <div>
     <h2>Product List</h2>
 
+    <select [(ngModel)]="selectedCategory" (change)="filterByCategory()">
+        <option value="">All Categories</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+
+
+    <div class="product-grid">
+        <div class="product-container" *ngFor="let product of filteredProducts">
+            <div class="product-square">
+                <img [src]="product.image_urls[0]" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h2><a [routerLink]="['/product', product.id]">{{ product.title }}</a></h2>
+                    <p>Site: {{ product.site }}</p>
+                   <button (click)="addToWishlist(product.id)">Add to wishlist</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Site</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Link</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let product of products">
-            <td>{{ product.id }}</td>
-            <td>{{ product.site }}</td>
-            <td>{{ product.title }}</td>
-            <td>{{ product.price | currency: 'RON':'symbol':'1.2-2' }}</td>
-            <td><a href="{{ product.link }}" target="_blank">{{ product.link }}</a></td>
-        </tr>
-        </tbody>
-    </table>
+
+<!--             <td>
+                <button (click)="addToWishlist(product.id)">Add to wishlist</button>
+            </td> -->
+     
+
 </div>

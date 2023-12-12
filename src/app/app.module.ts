@@ -23,6 +23,12 @@ import {ProductService} from "./_services/product.service";
 import { SearchResultComponent } from './search-result/search-result.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 
+// import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+
+
 
 
 @NgModule({
@@ -38,16 +44,20 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     ShowProductDetailsComponent,
 
     SearchResultComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    ProductDetailComponent,
+    WishlistComponent
 
   ],
     imports: [
+        // MatSnackBarModule,
         BrowserModule,
         AppRoutingModule,
         FormsModule,
         HttpClientModule,
         RouterModule,
-        ReactiveFormsModule,
+        ReactiveFormsModule
+
     ],
   providers: [
 

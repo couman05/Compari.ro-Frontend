@@ -14,3 +14,35 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between product squares */
+}
+
+.product-container {
+    flex: 1 0 calc(33.33% - 20px); /* Adjust the width of each product square */
+}
+
+.product-square {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100px; /* Adjust the maximum width of the product image */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-details h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-details p {
+    font-size: 14px;
+    color: #666;
+}

@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserAuthService } from './user-auth.service';
+import {Observable} from "rxjs";
+import {Product} from "../_model/product.model";
 
 @Injectable({
   providedIn: 'root',
@@ -60,4 +62,12 @@ export class UserService {
       }
     }
   }
+
+  getCurrentUserDetails(): Observable<any> {
+    return this.httpclient.get<any>(`${this.PATH_OF_API}/getUserDetails`);
+  }
+  getDocumentsForCurrentUser(userId: string): Observable<Product[]> {
+    return this.httpclient.get<Product[]>(`${this.PATH_OF_API}/documents/${userId}`);
+  }
+
 }
