@@ -1,19 +1,33 @@
-<div *ngIf="product">
-    <h2>{{ product.title }}</h2>
-    <img [src]="product.image_urls" alt="Product Image" class="product-image">
-    <div class="product-details">
-        <p><strong>Site:</strong> {{ product.site }}</p>
-        <p><strong>Price:</strong> {{ product.price | currency:'RON '}}</p>
-        <p><strong>Link:</strong> <a href="{{ product.link }}" target="_blank">{{ product.link }}</a></p>
-        <p><strong>Category:</strong> {{ product.category }}</p>
+<div *ngIf="product" class="product-details-container">
+   <div class="title">
+       <h2>{{ product.title }}</h2>
+   </div>
+    <div class="product-image-info">
+    <div class="product-image-container">
+        <img [src]="product.image_urls" alt="Product Image" class="product-image">
+        <p><strong>Link: </strong> <a href="{{ product.link }}" target="_blank">{{ product.link }}</a></p>
+    </div>
+    <div class="product-info">
+
+        <div class="product-specs">
+            <p><strong>Site:</strong> {{ product.site }}</p>
+            <p><strong>Price:</strong> {{ product.price | currency:'RON '}}</p>
+            <p><strong>Category:</strong> {{ product.category }}</p>
+        </div>
+
+    </div>
+    </div>
+    <div class="description">
         <p><strong>Description:</strong></p>
-        <ul>
-            <li *ngFor="let desc of product.description">{{ desc }}</li>
-        </ul>
+            <h7 *ngFor="let desc of product.description">{{ desc }}</h7>
+
+    </div>
+
+    <div class="reviews">
         <p><strong>Reviews:</strong></p>
         <ul>
             <li *ngFor="let review of product.reviews">{{ review }}</li>
         </ul>
-        <!-- Add other fields as needed -->
     </div>
+
 </div>
