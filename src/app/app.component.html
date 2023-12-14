@@ -1,3 +1,7 @@
 <app-header></app-header>
-
+<div *ngIf="isRootRoute" class="animate-character">
+    <h1>Welcome to Zoompari.ro!</h1>
+    <h2>Enjoy your experience with us.</h2>
+</div>
+<router-outlet></router-outlet>
 <router-outlet></router-outlet>
