@@ -1,10 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Angular + JWT</a>
+    <div class="container">
+      <a class="navbar-brand" href="#">Zoompari.ro</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
@@ -33,29 +34,19 @@
                *ngIf="userService.roleMatch(['Admin'])"
             >Show All Products</a>
           </li>
-
-
-          <div class="nav-search">
-            <div class="search-container">
-              <form #searchform="ngForm" (ngSubmit)="onSearch(searchkeyword.value)" *ngIf="userService.roleMatch(['User'])">
-                <input type="text" #searchkeyword name="searchKey" placeholder="Search any product" class="w-30">
-                <button type="submit" routerLink="/searchResult"><i class="fa fa-search" ></i></button>
-              </form>
-
-
-
-            </div>
-          </div>
-
-
-
+          <li class="nav-item">
+            <form #searchform="ngForm" (ngSubmit)="onSearch(searchkeyword.value)" *ngIf="userService.roleMatch(['User'])">
+              <div class="input-group align-items-center">
+                <input type="text" #searchkeyword name="searchKey" placeholder="Search any product" class="form-control" style="margin-right: 10px;">
+                <button type="submit" routerLink="/searchResult" class="btn btn-primary mr-1 custom-btn" style="height: 38px; line-height: 1; display: flex; align-items: center;">Search<i class="fa fa-search"></i></button>
+              </div>
+            </form>
+          </li>
         </ul>
-
-
-
-
+        <div class="justify-content-end">
         <button *ngIf="! isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">Login</button>
         <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()" >Logout</button>
+          </div>
       </div>
     </div>
   </nav>

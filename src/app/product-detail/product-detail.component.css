@@ -1,0 +1,51 @@
+.product-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    text-align: center; /* Center text */
+    font-size: 20px;
+}
+
+.product-info {
+    flex: 1;
+    text-align: left; /* Align details to the left */
+    vertical-align: top;
+    margin-top: 80px;
+    font-size: 35px;
+}
+
+.product-image-container {
+    margin-left: 20px;
+    text-align: left; /* Align image to the left */
+    max-width: 350px;
+    vertical-align: top;
+    margin-right: 400px;
+}
+
+.product-image {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+.product-image-info{
+    display: flex;
+
+}
+
+.product-specs {
+    line-height: 1.6;
+    text-align: center; /* Align specs to the left */
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-image-container a {
+    color: white;
+    /* Any other styles you want to apply */
+}
