@@ -3,6 +3,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    table-layout:fixed
 }
 
 th, td {
@@ -13,4 +14,11 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+}
+
+.limited-cell {
+    max-width: 200px; /* Set a maximum width for the problematic column */
+    overflow: hidden; /* Truncate content that exceeds the width */
+    text-overflow: ellipsis; /* Display an ellipsis (...) for truncated text */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
