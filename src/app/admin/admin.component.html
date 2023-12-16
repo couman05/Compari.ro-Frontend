@@ -1,14 +1,18 @@
 <div class="container mt-5">
-    <div class="card text-center" style="color: green; padding: 20px;">
-        <h1>You are Admin</h1>
-        <h1>{{message}}</h1>
+    <div class="card text-center">
+        <h1>Hello, {{ user.userName }}!</h1>
+        <h1>--- this is your account ---</h1>
     </div>
 </div>
 
-<div *ngIf="user">
-    <h2>User Details</h2>
-    <p><strong>User Name:</strong> {{ user.userName }}</p>
-    <p><strong>First Name:</strong> {{ user.userFirstName }}</p>
-    <p><strong>Last Name:</strong> {{ user.userLastName }}</p>
-    <p><strong>Email:</strong> {{ user.email }}</p>
+<div class="details-container" *ngIf="user">
+    <div class="card text-left centered-card">
+        <h2 style="color: #52054b;">Admin Details</h2>
+        <p><strong style="color: #52054b;">User Name:</strong> {{ user.userName }}</p>
+        <p><strong style="color: #52054b;">First Name:</strong> {{ user.userFirstName }}</p>
+        <p><strong style="color: #52054b;">Last Name:</strong> {{ user.userLastName }}</p>
+        <p><strong style="color: #52054b;">Email:</strong> {{ user.email }}</p>
+    </div>
 </div>
+
+

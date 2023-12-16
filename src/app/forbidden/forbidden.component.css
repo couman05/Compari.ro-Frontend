@@ -1,0 +1,26 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(249, 249, 249, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forbidden-card {
+    border: 1px solid #ff1744; /* Red border for emphasis */
+    background-color: #ffebee; /* Light red background */
+}
+
+.forbidden-message {
+    color: #d50000; /* Darker red for the text */
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 20px;
+}

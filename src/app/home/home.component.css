@@ -5,11 +5,67 @@
     margin-top: 20px;
 }
 
+
+
+.container {
+    display: flex;
+    border-radius: 5px;
+}
+
+.left-bar {
+    max-width: 300px; /* Adjust the width as needed */
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.card1 {
+    max-width: 600px;
+    margin: 40px auto;
+    margin-top: -20px;
+    padding:30px;
+    font-family: "Malgun Gothic";
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    border-radius: 5px;
+
+
+}
+
+.card {
+    max-width: 100%; /* Adjust the width as needed */
+    margin: 0;
+    margin-top: 20px;
+    padding: 0px;
+    font-family: "Malgun Gothic";
+    background-color: transparent;
+    text-align: center;
+    border-radius: 5px;
+}
+
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     padding: 8px;
     text-align: left;
+
 }
+
+.products-heading{
+    text-align: center;
+}
+
+.custom-btn {
+    background-color: rgba(95, 38, 140, 0.5);
+    transition: background-color 0.3s ease;
+}
+.custom-btn:hover {
+     background-color: rgba(194, 122, 243, 0.5) !important;
+ }
 
 th {
     background-color: #f2f2f2;
@@ -22,49 +78,73 @@ th {
 
 .product-container {
     flex: 1 0 calc(33.33% - 20px); /* Adjust the width of each product square */
+
 }
 
 .product-square {
     border: 1px solid #ccc;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(190, 178, 201, 0.5);
     text-align: center;
+    border-radius: 5px;
 }
 
 .product-image {
     max-width: 100px; /* Adjust the maximum width of the product image */
     height: auto;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
+
 
 .product-details h2 {
     font-size: 18px;
     margin-bottom: 5px;
+    color: #ffffff; /* Change the color to purple */
 }
+.product-details h2 a {
+
+    color: white; /* Change the color to purple */
+}
+.product-details h2 a:hover {
+
+    color: rgba(95, 38, 140, 0.5); /* Change the color to purple */
+}
+
 
 .product-details p {
     font-size: 14px;
     color: #666;
+
+}
+.product-details p1 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+
 }
 .category-item {
     cursor: pointer;
     transition: color 0.3s ease;
+    color: #0e6762;
+
 }
 
 .category-item:hover {
-    color: blue; /* Change color on hover */
+    color: rgba(95, 38, 140, 0.5); /* Change color on hover */
 }
 
 .reset-button {
-    background-color: red;
+    background-color: rgba(95, 38, 140, 0.5);
     color: white;
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 50px 0;
 }
 
 .reset-button:hover {
-    background-color: darkred;
+    background-color: rgba(194, 122, 243, 0.5);
 }

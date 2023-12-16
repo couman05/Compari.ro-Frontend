@@ -1,5 +1,40 @@
-div {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+.container {
+    max-width: 600px;
+    margin: 0 auto;
 }
+
+.card {
+    background-color: rgba(248, 249, 250, 0.6);
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 20px;
+    color: #0e6762;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.details-container {
+    margin-top: 20px;
+}
+
+.details-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.details-container p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.centered-card {
+    margin: 0 auto;
+    max-width: 400px; /* Adjust the max-width as needed */
+    text-align: center;
+}
+
+/* Add additional styles as needed */

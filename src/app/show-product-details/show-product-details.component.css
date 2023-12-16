@@ -1,9 +1,11 @@
 /* product-list.component.css */
+/* Style for the entire table */
 .table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    table-layout:fixed
+
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 th, td {
@@ -16,9 +18,57 @@ th {
     background-color: #f2f2f2;
 }
 
+.custom-btn {
+    background-color: rgba(95, 38, 140, 0.5);
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+}
+.custom-btn:hover {
+    background-color: rgba(194, 122, 243, 0.5) !important;
+}
+
+.btn-danger{
+    padding-right:18px;
+}
+
+
 .limited-cell {
     max-width: 200px; /* Set a maximum width for the problematic column */
     overflow: hidden; /* Truncate content that exceeds the width */
     text-overflow: ellipsis; /* Display an ellipsis (...) for truncated text */
     white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.card1 {
+    max-width: 600px;
+    margin: 40px auto;
+    margin-top: 0px;
+    padding:10px;
+    font-family: "Malgun Gothic";
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    border-radius: 5px;
+
+
+}
+
+/* Center the input field */
+.w-30 {
+    width: 30%; /* Adjust the width as needed */
+    display: block;
+    margin: 0 auto;
+    margin-top:-20px;
+}
+
+/* Style for the input field */
+.w-30 {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Optional: Add hover effect */
+.w-30:hover {
+    border-color: #555;
 }

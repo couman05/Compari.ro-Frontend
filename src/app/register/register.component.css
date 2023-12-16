@@ -1,0 +1,52 @@
+.container {
+    max-width: 400px;
+    margin: 5rem auto;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.card {
+    margin-bottom: 1rem;
+    padding: 20px;
+    background-color: transparent; /* Makes the card's background transparent */
+    border: none; /* Removes the border */
+    box-shadow: none;
+    border-radius: 8px;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+
+}
+
+.form-control {
+    padding: 0.75rem;
+    border: 1px solid rgba(249, 249, 249, 0.1);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: rgba(249, 249, 249, 0.6);
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: grey
+}
+
+.text-center {
+    text-align: center;
+}

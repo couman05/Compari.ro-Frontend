@@ -1,11 +1,15 @@
 <!-- product-list.component.html -->
 <div>
-    <h2>Product List</h2>
+    <div class="card1 text-center">
+        <h1>PRODUCTS</h1>
+    </div>
 
+    <div class="dropdown text-center">
     <select [(ngModel)]="selectedCategory" (change)="filterByCategory()">
         <option value="">All Categories</option>
         <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
     </select>
+        </div>
 
 
     <div class="product-grid">
@@ -14,8 +18,12 @@
                 <img [src]="product.image_urls[0]" alt="Product Image" class="product-image">
                 <div class="product-details">
                     <h2><a [routerLink]="['/product', product.id]">{{ product.title }}</a></h2>
-                    <p>Site: {{ product.site }}</p>
-                   <button (click)="addToWishlist(product.id)">Add to wishlist</button>
+                    <p>
+                        Site: {{ product.site }}<br>
+                        PRICE: {{ product.price }}
+                    </p>
+                    <button (click)="addToWishlist(product.id)" class="btn btn-primary mr-1 custom-btn">Add to wishlist
+                        <i class="fa fa-wish"></i></button>
                 </div>
             </div>
         </div>

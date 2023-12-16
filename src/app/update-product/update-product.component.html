@@ -1,19 +1,23 @@
-<!-- product-update.component.html -->
-
-<div>
+<div class="update-product-container">
     <h2>Update Product</h2>
-    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-        <label for="site">Site:</label>
-        <input type="text" id="site" formControlName="site" />
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="update-form">
+        <div class="form-group">
+            <label for="site">Site:</label>
+            <input type="text" id="site" formControlName="site" />
+        </div>
 
-        <label for="title">Title:</label>
-        <input type="text" id="title" formControlName="title" />
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" formControlName="title" />
+        </div>
 
-        <label for="price">Price:</label>
-        <input type="number" id="price" formControlName="price" />
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" id="price" formControlName="price" />
+        </div>
 
         <!-- Add form controls for other fields like link, etc. -->
 
-        <button type="submit">Update Product</button>
+        <button type="submit" class="update-button">Update Product</button>
     </form>
 </div>

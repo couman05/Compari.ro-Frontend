@@ -18,31 +18,110 @@ th {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* Adjust the gap between product squares */
+
 }
 
 .product-container {
     flex: 1 0 calc(33.33% - 20px); /* Adjust the width of each product square */
+
 }
 
 .product-square {
     border: 1px solid #ccc;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(190, 178, 201, 0.5);
     text-align: center;
+    border-radius: 5px;
 }
 
 .product-image {
     max-width: 100px; /* Adjust the maximum width of the product image */
     height: auto;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .product-details h2 {
     font-size: 18px;
     margin-bottom: 5px;
+    color: #ffffff; /* Change the color to purple */
+}
+.product-details h2 a {
+
+    color: white; /* Change the color to purple */
+}
+.product-details h2 a:hover {
+
+    color: rgba(95, 38, 140, 0.5); /* Change the color to purple */
 }
 
 .product-details p {
     font-size: 14px;
     color: #666;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.card1 {
+    max-width: 600px;
+    margin: 40px auto;
+    margin-top: 10px;
+    padding:20px;
+    font-family: "Malgun Gothic";
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    border-radius: 5px;
+
+
+}
+
+/* Styles for the dropdown container */
+.dropdown {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+/* Styles for the actual dropdown */
+.dropdown select {
+    width: 200px; /* Set the width of the dropdown */
+    padding: 10px; /* Add padding to the dropdown */
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    background-color: rgba(255, 255, 255, 0.7); /* Set the background color */
+}
+
+/* Styles for the dropdown arrow */
+.dropdown select::after {
+    content: '\25BC'; /* Unicode character for a down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Styles for the dropdown options */
+.dropdown select option {
+    font-size: 14px; /* Set the font size for options */
+    background-color: #fff; /* Set the background color for options */
+    color: #333; /* Set the text color for options */
+}
+
+/* Hover effect for dropdown options */
+.dropdown select option:hover {
+    background-color: #f0f0f0; /* Set a different background color on hover */
+}
+
+
+.custom-btn {
+    background-color: rgba(95, 38, 140, 0.5);
+    transition: background-color 0.3s ease;
+}
+.custom-btn:hover {
+    background-color: rgba(194, 122, 243, 0.5) !important;
 }

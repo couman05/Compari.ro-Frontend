@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from "../_services/product.service";
 import {UserService} from "../_services/user.service";
+import {SearchService} from "../_services/search.service";
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   filteredProducts: any[] = [];
   selectedCategory: string = '';
   hoveredCategory: string = '';
-  constructor(private productService: ProductService, public userService: UserService,) { }
+  constructor(private searchService: SearchService, private productService: ProductService, public userService: UserService,) { }
 
   ngOnInit(): void {
     this.getCategories();
@@ -42,6 +43,21 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  addToWishlist(productId: string)
+  {
+    this.searchService.addToWishlist(productId).subscribe(() => {
+      // If successful, remove the deleted product from the local array
+      this.products = this.products.filter(product => product.id !== productId);
+
+      console.log("igenigen")
+      // this.snackBar.open('Product added to wishlist', 'Dismiss', {
+      //     duration: 3000,  // Specify the duration in milliseconds
+      // });
+
+    }, error => {
+      console.error('Error adding product to wishlist:', error);
+    });
+  }
   resetFilter(): void {
     this.filteredProducts = this.products;
     this.hoveredCategory = '';

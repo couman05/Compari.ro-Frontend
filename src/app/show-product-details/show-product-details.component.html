@@ -1,5 +1,7 @@
 <!-- show-product-details.component.html -->
-    <h2>Product List</h2>
+<div class="card1 text-center">
+    <h1>PRODUCT LIST</h1>
+</div>
 
     <div class="table-container">
     <input type="text"
@@ -31,7 +33,7 @@
             <td>{{ product.price | currency: 'RON':'symbol':'1.2-2' }}</td>
             <td class="limited-cell"><a href="{{ product.link }}" target="_blank">{{ product.link }}</a></td>
             <td>
-                <button (click)="redirectToUpdate(product.id)">Update</button>
+                <button (click)="redirectToUpdate(product.id)" class="btn btn-primary mr-1 custom-btn">Update</button>
                 <button  class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
             </td>
         </tr>
