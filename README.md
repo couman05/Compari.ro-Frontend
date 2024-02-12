@@ -1,6 +1,6 @@
-# [Zoompari.ro]
+# Zoompari.ro
 
-[Zoompari.ro] is a full-stack web application designed to aggregate and compare product prices across various online stores, offering functionalities similar to compari.ro. This application leverages Angular for the frontend, Spring Boot for the backend, MySQL and MongoDB for data storage, and implements data scraping to gather product information.
+Zoompari.ro is a full-stack web application designed to aggregate and compare product prices across various online stores, offering functionalities similar to compari.ro. This application leverages Angular for the frontend, Spring Boot for the backend, MySQL and MongoDB for data storage, and implements data scraping to gather product information.
 
 ## Features
 
