@@ -31,27 +31,35 @@ Before you begin, ensure you have met the following requirements:
 ## Usage and screenshots of application functionalities
 
 - **Landing page**
+  
   ![image](https://github.com/couman05/Compari.ro-Frontend/assets/103687306/65d0aa27-e092-4cbb-a436-01a648a88e92)
   
 - **Home Page**
+  
   ![image](https://github.com/couman05/Compari.ro-Frontend/assets/103687306/d80f6e85-53c9-4197-8ea7-88e114c60d12)
   
 - **Search and Compare:** Enter a product name to view prices from different stores.
+  
   ![image](https://github.com/couman05/Compari.ro-Frontend/assets/103687306/5d446fde-d821-4ffa-94e1-2b72a0f952cd)
   
 - **Product Page**
+  
   ![image](https://github.com/couman05/Compari.ro-Frontend/assets/103687306/2022b60f-cbc8-43d6-aa5e-dd4b3ee84851)
   
 - **Wishlist**
+  
   ![image](https://github.com/couman05/Compari.ro-Frontend/assets/103687306/77e81560-4845-4d85-ace4-2407d3579a21)
   
 - **Personalized alert email notifications**
+  
   ![image](https://github.com/couman05/Compari.ro-Frontend/assets/103687306/a2761311-4296-4bd3-9c3f-953e168e91a8)
   
 - **Create an Account:** Sign up to access personalized features such as wishlists and alerts.
+  
   ![image](https://github.com/couman05/Compari.ro-Frontend/assets/103687306/61039cc1-d75c-459c-b9a3-58c8c17bbc4e)
   
 - **Admin Panel:** Accessible by admin users for managing application data.
+  
   ![image](https://github.com/couman05/Compari.ro-Frontend/assets/103687306/4d35b892-a6a3-4f1c-964b-a4a1416f525a)
 
 
