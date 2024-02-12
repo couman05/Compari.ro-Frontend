@@ -54,9 +54,9 @@ Data scraping python scripts are already set up locally. With their help we basi
 
 ## Team members 
 
-Buze Alexandra-Maria
-Coman Emanuel-Stefan
-Martin Carla-Iulia
+Buze Alexandra-Maria: https://github.com/BuzeAlexandra
+Coman Emanuel-Stefan: https://github.com/couman05
+Martin Carla-Iulia: https://github.com/carlaIMartin
 
 
 
