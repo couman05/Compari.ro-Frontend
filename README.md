@@ -18,7 +18,7 @@ Before you begin, ensure you have met the following requirements:
 - MySQL Server
 - MongoDB
 - Maven (for Spring Boot project management)
-- Data Scraping Python script that collects info from various sites and populates MongoDb collcetion 
+- Data Scraping Python script that collects info from various sites and populates MongoDb collection 
 
 ## Installation
 
